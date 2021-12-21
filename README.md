@@ -1,10 +1,6 @@
 # ProjectHierarchySample
 
-##Архитектура
-- **0 слой**. Описание директивы с базовой логикой. Директория `src/core`. Все классы именуются с префиксом `Core`
-- **1 слой**. Сами проекты. В них располагаются компоненты и модули, которые наследуются от 0 слоя. Директория `src/projects`. Селекторы компонентов именованы с префиксом проекта.
-- **2 слой**. Подпроекты, которые наследуют или переопределяют логику от 1 слоя. Директория `src/projects/sub-projects`. Переопределенные селекторы именнуем с префиксом проекта.
-
-Приложения находящиеся на одном уровнем не должны иметь зависимости между собой.
-При импорте модуля из слоя выше, всегда (даже когда не идет переопределение логики) необходимо создавать новый модуль, который в себя должен импортировать `BaseModule`.
-При импорте класса из слоя выше и возникновении конфликта имен, использовать именованный импорт с префиксом `Base`.
+##Architecture
+- ** 0 layer ** - description of a directive with basic logic. The `src/core` directory. All classes are named with the `Core` prefix
+- ** 1 layer ** - projects. They contain components and modules that inherit from layer 0. Directory `src/projects`. Component selectors are named with a project prefix.
+- ** 2 layer ** - subprojects that inherit or override logic from 1 layer. Directory `src/projects/sub-projects`. The overridden selectors are named with the project prefix.
